@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cNM-w8-lnF">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Photos View Controller-->
+        <scene sceneID="EXb-Ro-J1K">
+            <objects>
+                <viewController id="cNM-w8-lnF" customClass="PhotosViewController" customModule="Tumblr_Lab_October_2019" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kED-EB-QM7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="250" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6FL-oS-1ew">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PhotosCell" rowHeight="250" id="ZzO-p6-O7w" customClass="PhotosCell" customModule="Tumblr_Lab_October_2019" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="250"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZzO-p6-O7w" id="uhB-Th-dTp">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="a4T-WB-9Oh">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="a4T-WB-9Oh" secondAttribute="bottom" id="0Po-P0-7yd"/>
+                                                <constraint firstAttribute="trailing" secondItem="a4T-WB-9Oh" secondAttribute="trailing" id="1O3-Vn-c3x"/>
+                                                <constraint firstItem="a4T-WB-9Oh" firstAttribute="leading" secondItem="uhB-Th-dTp" secondAttribute="leading" id="hwq-P6-7Ih"/>
+                                                <constraint firstItem="a4T-WB-9Oh" firstAttribute="top" secondItem="uhB-Th-dTp" secondAttribute="top" id="zBz-2X-1LO"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="photoImageView" destination="a4T-WB-9Oh" id="hYl-6P-RTt"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6FL-oS-1ew" firstAttribute="leading" secondItem="kXY-fA-09T" secondAttribute="leading" id="Idm-UK-tj1"/>
+                            <constraint firstItem="6FL-oS-1ew" firstAttribute="top" secondItem="kXY-fA-09T" secondAttribute="top" id="ZNR-u3-eSm"/>
+                            <constraint firstItem="6FL-oS-1ew" firstAttribute="trailing" secondItem="kXY-fA-09T" secondAttribute="trailing" id="c7Y-ez-pUM"/>
+                            <constraint firstAttribute="bottom" secondItem="6FL-oS-1ew" secondAttribute="bottom" id="swp-DH-eWj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kXY-fA-09T"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="6FL-oS-1ew" id="xCR-D3-EwO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hfA-Kj-b4P" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+</document>
